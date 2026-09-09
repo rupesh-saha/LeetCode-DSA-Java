@@ -15,15 +15,15 @@
  */
 class Solution {
     int[] result;
-    int idx = 1;
+    int idx = 0;
 
     public int kthSmallest(TreeNode root, int k) {
         int size = getSize(root);
-        result = new int[size+1];
+        result = new int[size];
 
         inOrder(root);
 
-        return result[k];
+        return result[k-1];
     }
 
     public void inOrder(TreeNode root){
